@@ -73,7 +73,7 @@ const Header = () => {
 
                 {/* SignIn Button for SignedOut */}
                 <SignedOut>
-                  <div className="inline-flex items-center px-8 py-2 border border-transparent text-base font-medium rounded-md text-white bg-buttonBackground hover:bg-orange-700 transition-all">
+                  <div className="inline-flex items-center px-8 py-2 border border-transparent text-base font-medium rounded-md text-white bg-orange-700 hover:bg-orange-800 transition-all">
                     <SignInButton />
                   </div>
                 </SignedOut>
