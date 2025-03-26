@@ -66,7 +66,7 @@ Accept: application/json
               </div>
             </div>
           </div>
-          <div className="mt-16 text-center">
+          {/* <div className="mt-16 text-center">
             <p className="text-gray-400 mb-4">Trusted by developers worldwide</p>
             <div className="flex justify-center space-x-8">
               <div className="text-gray-500">Company 1</div>
@@ -74,7 +74,7 @@ Accept: application/json
               <div className="text-gray-500">Company 3</div>
               <div className="text-gray-500">Company 4</div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>
