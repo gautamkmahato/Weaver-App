@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from 'next/link';
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import logo from '../../../public/assets/logo-4-white.png';
 
@@ -33,7 +34,7 @@ const Header = () => {
                   href="/"
                   className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
-                  Home
+                  Homee
                 </Link>
                 <Link
                   href="#guides"
@@ -60,6 +61,22 @@ const Header = () => {
                   Support
                 </Link>
                 
+                {/* User Button with vertical alignment */}
+                <SignedIn>
+                  <Link href="/dashboard" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                    Dashboard
+                  </Link>
+                  <div className="flex items-center justify-center">
+                    <UserButton className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" /> 
+                  </div>
+                </SignedIn>
+
+                {/* SignIn Button for SignedOut */}
+                <SignedOut>
+                  <div className="inline-flex items-center px-8 py-2 border border-transparent text-base font-medium rounded-md text-white bg-buttonBackground hover:bg-orange-700 transition-all">
+                    <SignInButton />
+                  </div>
+                </SignedOut>
               </div>
             </div>
 
