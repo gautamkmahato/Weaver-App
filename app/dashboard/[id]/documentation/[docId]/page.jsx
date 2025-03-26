@@ -5,10 +5,10 @@ import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { RedirectToSignIn, useAuth, useUser } from '@clerk/nextjs';
-import fetchJsonData from '@/app/actions/fetchJsonData';
-import LoadingSpinner from '@/app/_components/LoadingSpinner';
-import UploadSchema from '@/app/dashboard/_components/UploadSchema';
-import Test from '@/app/_components/Test';
+import fetchJsonData from '../../../../actions/fetchJsonData'
+import LoadingSpinner from '../../../../_components/LoadingSpinner'
+import UploadSchema from '../../../_components/UploadSchema'
+import Test from '../../../../_components/Test'
 
 
  

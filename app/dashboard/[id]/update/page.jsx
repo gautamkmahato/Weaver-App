@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react';
 import ProjectTabs from '../../_components/ProjectTabs';
 import { useUser } from '@clerk/nextjs';
 import { useParams } from 'next/navigation'; 
-import fetchProjectById from '@/app/actions/fetchProjectById';
-import updateProject from '@/app/actions/updateProject';
+import fetchProjectById from '../../../actions/fetchProjectById';
+import updateProject from '../../../actions/updateProject'
 import Link from 'next/link';
-import LoadingSpinner from '@/app/_components/LoadingSpinner';
+import LoadingSpinner from '../../../_components/LoadingSpinner'
 
 export default function ProjectUpdatePage() {
   const [projectName, setProjectName] = useState("");

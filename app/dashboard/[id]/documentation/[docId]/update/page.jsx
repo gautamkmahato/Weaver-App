@@ -3,11 +3,11 @@
 import { useEffect, useState } from 'react';
 import { useAuth, useUser } from '@clerk/nextjs';
 import { useParams } from 'next/navigation';
-import fetchDocumentationByDocId from '@/app/actions/fetchDocumentationByDocId';
-import DocumentationTabs from '@/app/dashboard/_components/DocumentationTabs';
-import updateDocumentation from '@/app/actions/updateDocumentation';
+import fetchDocumentationByDocId from '../../../../../actions/fetchDocumentationByDocId';
+import DocumentationTabs from '../../../../_components/DocumentationTabs'
+import updateDocumentation from '../../../../../actions/updateDocumentation'
 import Link from 'next/link';
-import LoadingSpinner from '@/app/_components/LoadingSpinner';
+import LoadingSpinner from '../../../../../_components/LoadingSpinner'
 
 export default function DocumentationUpdatePage() {
   const [title, setTitle] = useState("");
