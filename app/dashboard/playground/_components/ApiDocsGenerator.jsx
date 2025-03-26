@@ -1,6 +1,6 @@
 'use client';
 
-import SchemaGenerator from '@/app/_components/SchemaGenerator';
+import SchemaGenerator from '../../../_components/SchemaGenerator';
 import React, { useState } from 'react';
 import { Upload, FileText, ArrowUpCircle, FileJson, RefreshCcw } from 'lucide-react';
 import SwaggerParser from '@apidevtools/swagger-parser';
