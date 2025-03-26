@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import createNewProject from '@/app/actions/createNewProject';
+import createNewProject from '../../actions/createNewProject';
 import { useAuth, useUser } from '@clerk/nextjs';
 import Link from 'next/link';
 

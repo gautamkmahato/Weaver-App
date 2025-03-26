@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 import Test from '../../_components/Test';
-import uploadJsonData from '@/app/actions/uploadJsonData';
+import uploadJsonData from '../../actions/uploadJsonData';
 import { RedirectToSignIn, useAuth, useUser } from '@clerk/nextjs';
-import LoadingSpinner from '@/app/_components/LoadingSpinner';
+import LoadingSpinner from '../../_components/LoadingSpinner';
 import { Upload, FileText, ArrowUpCircle, FileJson } from 'lucide-react';
 import SwaggerParser from '@apidevtools/swagger-parser';
 import yaml from 'js-yaml';

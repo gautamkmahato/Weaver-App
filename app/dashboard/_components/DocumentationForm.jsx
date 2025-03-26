@@ -1,6 +1,6 @@
 'use client'
 
-import createNewDocumentation from "@/app/actions/createNewDocumentation";
+import createNewDocumentation from '../../actions/createNewDocumentation'
 import { useAuth, useUser } from "@clerk/nextjs";
 import Link from "next/link";
 import { useState } from "react";

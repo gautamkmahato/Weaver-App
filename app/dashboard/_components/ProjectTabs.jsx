@@ -1,5 +1,5 @@
-import ConfirmModal from '@/app/_components/ConfirmModal';
-import deleteProject from '@/app/actions/deleteProject';
+import ConfirmModal from '../../_components/ConfirmModal';
+import deleteProject from '../../actions/deleteProject';
 import { useAuth, useUser } from '@clerk/nextjs';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';

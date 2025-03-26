@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import deleteDocumentation from '@/app/actions/deleteDocumentation';
-import ConfirmModal from '@/app/_components/ConfirmModal';
+import deleteDocumentation from '../../actions/deleteDocumentation';
+import ConfirmModal from '../../_components/ConfirmModal';
 import { useAuth, useUser } from '@clerk/nextjs';
 import Link from 'next/link';
 
