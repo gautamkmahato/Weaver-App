@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { useAuth, useUser } from '@clerk/nextjs';
 import { useParams } from 'next/navigation';
-import updateProject from '@/app/actions/updateProject';
 import fetchDocumentationByDocId from '@/app/actions/fetchDocumentationByDocId';
 import DocumentationTabs from '@/app/dashboard/_components/DocumentationTabs';
 import updateDocumentation from '@/app/actions/updateDocumentation';
