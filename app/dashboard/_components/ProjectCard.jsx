@@ -50,7 +50,7 @@ export default function ProjectCard({ title, description, created_at, project_id
         </div>
 
         {/* Existing content */}
-        <span className="inline-block rounded bg-iconBackground p-2 text-white dark:bg-blue-700">
+        <span className="inline-block rounded bg-amber-600 p-2 text-white dark:bg-amber-700">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="size-6"
@@ -80,7 +80,7 @@ export default function ProjectCard({ title, description, created_at, project_id
         </p>
 
         <Link
-          className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-buttonBackground hover:text-orange-600 hover:text-[15px]"
+          className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-amber-600 hover:text-amber-700 hover:text-[15px]"
           href={`/dashboard/${project_id}`}
         >
           Go to Project

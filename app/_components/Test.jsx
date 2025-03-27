@@ -139,7 +139,7 @@ export default function Test({ apiData, docId }) {
                             handlePathChange(path);
                             handleMethodChange(method);
                           }}
-                          className={`w-full px-4 py-2 text-left rounded-md text-sm font-medium transition-colors duration-200 ${
+                          className={`w-full px-4 py-2 text-left cursor-pointer rounded-md text-sm font-medium transition-colors duration-200 ${
                             activePath === path && activeMethod === method
                               ? getMethodColor(method)
                               : ' text-gray-700 hover:bg-gray-200'
@@ -202,7 +202,7 @@ export default function Test({ apiData, docId }) {
                           <button
                             key={tab}
                             onClick={() => setActiveTab(tab)}
-                            className={`pb-4 px-4 text-sm font-medium transition-colors duration-200 ${
+                            className={`pb-4 px-4 text-sm font-medium cursor-pointer transition-colors duration-200 ${
                               activeTab === tab
                                 ? 'border-b-2 border-blue-500 text-blue-600'
                                 : 'text-gray-500 hover:text-gray-700'
@@ -259,7 +259,7 @@ export default function Test({ apiData, docId }) {
                             <div className="flex space-x-4">
                               <button
                                 onClick={() => setActiveBodyTab('json')}
-                                className={`pb-2 px-4 text-sm font-medium transition-colors duration-200 ${
+                                className={`pb-2 px-4 text-sm font-medium cursor-pointer transition-colors duration-200 ${
                                   activeBodyTab === 'json'
                                     ? 'border-b-2 border-blue-500 text-blue-600'
                                     : 'text-gray-500 hover:text-gray-700'
@@ -269,7 +269,7 @@ export default function Test({ apiData, docId }) {
                               </button>
                               <button
                                 onClick={() => setActiveBodyTab('message')}
-                                className={`pb-2 px-4 text-sm font-medium transition-colors duration-200 ${
+                                className={`pb-2 px-4 text-sm font-medium cursor-pointer transition-colors duration-200 ${
                                   activeBodyTab === 'message'
                                     ? 'border-b-2 border-blue-500 text-blue-600'
                                     : 'text-gray-500 hover:text-gray-700'
@@ -306,7 +306,7 @@ export default function Test({ apiData, docId }) {
                             <div className="flex space-x-4">
                               <button
                                 onClick={() => setActiveResponseTab('json')}
-                                className={`pb-2 px-4 text-sm font-medium transition-colors duration-200 ${
+                                className={`pb-2 px-4 text-sm font-medium cursor-pointer transition-colors duration-200 ${
                                   activeResponseTab === 'json'
                                     ? 'border-b-2 border-blue-500 text-blue-600'
                                     : 'text-gray-500 hover:text-gray-700'
@@ -316,7 +316,7 @@ export default function Test({ apiData, docId }) {
                               </button>
                               <button
                                 onClick={() => setActiveResponseTab('message')}
-                                className={`pb-2 px-4 text-sm font-medium transition-colors duration-200 ${
+                                className={`pb-2 px-4 text-sm font-medium cursor-pointer transition-colors duration-200 ${
                                   activeResponseTab === 'message'
                                     ? 'border-b-2 border-blue-500 text-blue-600'
                                     : 'text-gray-500 hover:text-gray-700'

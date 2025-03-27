@@ -12,11 +12,11 @@ export default function ModalBox({
     <>
       {/* Button to Open Modal */}
       <button
-        className="inline-flex items-center gap-2 rounded border border-orange-500 bg-buttonBackground px-8 py-3 text-white hover:bg-orange-600 hover:text-white focus:outline-none focus:ring active:text-buttonBackground"
+        className="inline-flex items-center gap-2 rounded border cursor-pointer border-orange-500 bg-amber-600 px-8 py-3 text-white hover:bg-amber-700 hover:text-white focus:outline-none focus:ring active:text-buttonBackground"
         onClick={onClose} // Open the modal by calling `onClose` (misleading name, but it works)
       >
         <span className="text-sm font-medium"> {name} </span>
-        <Plus />
+        <Plus className='w-5 h-5' />
       </button>
 
       {/* Modal Backdrop and Content */}
@@ -28,11 +28,11 @@ export default function ModalBox({
         >
           <div className="bg-white p-6 rounded-lg shadow-lg w-11/12 max-w-md">
             {/* Modal Header */}
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-semibold">{name}</h2>
+            <div className="flex justify-between items-center">
+              <span></span>
               <button
                 onClick={onClose}
-                className="text-gray-500 hover:text-gray-700"
+                className="text-gray-500 cursor-pointer hover:text-gray-700"
                 aria-label="Close modal"
               >
                 <svg

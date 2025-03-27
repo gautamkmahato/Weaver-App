@@ -22,7 +22,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <div className="flex h-screen w-64 flex-col justify-between border-e bg-white">
+      <div className="flex h-screen w-64 flex-col justify-between shadow-md bg-white">
         <div className="px-4 py-6">
           <Link href="/">
             <span className="grid place-content-start rounded-lg text-xs text-gray-600">

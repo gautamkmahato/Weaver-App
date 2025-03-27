@@ -6,7 +6,7 @@ export default async function fetchProjects(userId, token) {
         userId: userId
     }
 
-    const response = await fetch('http://localhost:8000/protected', {
+    const response = await fetch('https://weaver-server.vercel.app/protected', {
         method: 'POST',
         headers: {
             'Content-type': 'application/json',

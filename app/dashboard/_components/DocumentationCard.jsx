@@ -15,16 +15,16 @@ export default function DocumentationCard({ id, docId, title, description }) {
 
     return (
         <>
-            <article className="rounded-lg border border-gray-100 bg-customColor shadow-sm p-4 transition hover:shadow-lg sm:p-6 relative">
+            <article className="rounded-lg border border-gray-100  shadow-sm p-4 transition hover:shadow-lg sm:p-6 relative">
                 {/* Three-dot icon */}
                 <div className="absolute top-4 right-4">
                     <button
                         onClick={toggleDropdown}
-                        className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 focus:outline-none"
+                        className="p-2 text-gray-500 cursor-pointer hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 focus:outline-none"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-6 w-6"
+                            className="h-5 w-5"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -53,7 +53,7 @@ export default function DocumentationCard({ id, docId, title, description }) {
                 </div>
 
                 {/* Existing content */}
-                <span className="inline-block rounded bg-iconBackground p-2 text-white">
+                <span className="inline-block rounded bg-amber-600 p-2 text-white">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="size-6"
@@ -80,7 +80,7 @@ export default function DocumentationCard({ id, docId, title, description }) {
                     {description}
                 </p> 
 
-                <Link href={`/dashboard/${id}/documentation/${docId}`} className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-buttonBackground hover:text-orange-600 hover:text-[15px]">
+                <Link href={`/dashboard/${id}/documentation/${docId}`} className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-amber-600 hover:text-orange-700 hover:text-[15px]">
                     Go to Documentation
 
                     <span aria-hidden="true" className="block transition-all group-hover:ms-0.5 rtl:rotate-180">

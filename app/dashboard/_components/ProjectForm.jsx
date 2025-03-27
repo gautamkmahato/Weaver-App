@@ -41,7 +41,7 @@ export default function Form({ onFormSubmit, userId }) {
     return(
       <>
         <div>
-          <p><span className="text-blue-700 font-semibold"><Link href='/sign-in'>Sign In</Link></span> in to view this page</p>
+          <p><span className="text-amber-700 font-semibold"><Link href='/sign-in'>Sign In</Link></span> in to view this page</p>
         </div>
       </>
     )
@@ -50,7 +50,7 @@ export default function Form({ onFormSubmit, userId }) {
   return (
     <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-lg">
-        <h1 className="text-center text-2xl font-bold text-indigo-600 sm:text-2xl">
+        <h1 className="text-center text-2xl font-bold text-amber-600 sm:text-2xl">
           Create New Project
         </h1>
         <form onSubmit={handleFormSubmit} className="mb-0 space-y-4 rounded-lg sm:p-6 lg:px-0 lg:py-4">
@@ -85,7 +85,7 @@ export default function Form({ onFormSubmit, userId }) {
           </div>
           <button
             type="submit"
-            className="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white"
+            className="block w-full rounded-lg bg-amber-600 hover:bg-amber-700 cursor-pointer px-5 py-3 text-sm font-medium text-white"
           >
             Submit
           </button>

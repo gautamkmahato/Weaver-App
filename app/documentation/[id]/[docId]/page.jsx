@@ -1,5 +1,6 @@
 'use client'
 
+import ErrorCard from '../../../_components/ErrorCard';
 import LoadingSpinnerWithText from '../../../_components/LoadingSpinner';
 import Test from '../../../_components/Test';
 import fetchJsonData from '../../../actions/fetchJsonData';
@@ -10,7 +11,8 @@ import { useEffect, useState } from 'react'
 
 export default function NewWindowDocumentationPage() {
 
-    const [checkDocIdStatus, setCheckDocIdStatus] = useState(false);
+    const [checkStatus, setCheckStatus] = useState(false);
+    const [docIdStatus, setDocIdStatus] = useState(false);
     const [loading, setLoading] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const [apiData, setApiData] = useState('');
@@ -31,12 +33,21 @@ export default function NewWindowDocumentationPage() {
                 const token = await getToken();
                 const jsonData = await fetchJsonData(docId, project_id, user?.id, token);
                 console.log(jsonData)
-                if(jsonData[0].openapi_schema){
-                    setCheckDocIdStatus(true);
-                    setLoading(false);
-                    setApiData(jsonData[0].openapi_schema);
+                if(jsonData?.status){
+                    if(jsonData[0]?.openapi_schema){
+                        setDocIdStatus(true); 
+                        setCheckStatus(true);
+                        setLoading(false);
+                        setApiData(jsonData[0].openapi_schema);
+                    } else{
+                        setDocIdStatus(true); 
+                        setCheckStatus(false);
+                        setLoading(false);
+                    }
                 } else{
-                    setErrorMessage(`Please upload the JSON data:`)
+                    setErrorMessage(jsonData?.message);
+                    setDocIdStatus(false); 
+                    setCheckStatus(false);
                     setLoading(false);
     
                 }
@@ -66,10 +77,9 @@ export default function NewWindowDocumentationPage() {
 
     return (
         <>
-            {errorMessage && <h1>{errorMessage}</h1>}
-            {checkDocIdStatus ? <Test apiData={apiData} docId={docId} /> : 
+            {docIdStatus ? <Test apiData={apiData} docId={docId} /> : 
                 <>
-                    <h1>No Data available</h1>
+                    <ErrorCard message="404 Documentation not found" btnText="Go to Homepage" />
                 </>
             }
         </>

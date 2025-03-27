@@ -8,7 +8,7 @@ export default async function fetchJsonData(docId, project_id, userId, token){
 
     const response = await fetch(`http://localhost:8000/api/v1/documentation/${docId}/schema/test`, {
         method: 'POST',
-        headers: { 
+        headers: {  
             'Content-type': 'application/json',
             'Authorization': `Bearer ${token}`  // Include the token in Authorization header
         }, 
@@ -20,7 +20,8 @@ export default async function fetchJsonData(docId, project_id, userId, token){
 
     if(!response.ok){
         return { 
-            message: "Error in fetching Request in fetchJsonData"
+            message: "Error in fetching Request in fetchJsonData",
+            status: false
         }
     }
     return result;
